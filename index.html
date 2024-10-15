@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="score-board">
+        <h1>SANJEET IS PLAYING</h1>
+        Score: <span id="score">0</span>
+        <br>
+        Time: <span id="timer">0</span> seconds
+    </div>
+    <select id="difficulty">
+        <option value="easy">Easy (4 pairs)</option>
+        <option value="medium">Medium (8 pairs)</option>
+        <option value="hard">Hard (12 pairs)</option>
+    </select>
+    <div class="game-container">
+        <div class="game-board" id="game-board"></div>
+    </div>
+    <button id="restart-button">Restart Game</button>
+    <button id="toggle-sound-button">Sound: On</button>
+
+    <!-- Add audio elements -->
+    <audio id="flip-sound" src="sounds/flip.mp3"></audio>
+    <audio id="match-sound" src="sounds/match.mp3"></audio>
+    <audio id="mismatch-sound" src="sounds/mismatch.mp3"></audio>
+
+    <!-- Leaderboard Section -->
+    <div id="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list">
+            <!-- Scores will be dynamically added here -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
